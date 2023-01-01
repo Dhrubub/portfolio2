@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './index.css';
+import Home from './components/home';
+import About from './components/about';
+import Projects from './components/projects';
+import Contact from './components/contact';
+
+import { Route, Routes } from 'react-router-dom';
+import Experience from './components/experience';
+import NavBar from './components/navbar';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div>
+			<div className='sticky top-0 z-50 px-5'>
+				<NavBar />
+			</div>
+
+			<div className='relative top-0.5 w-1/2 min-w-[900px] mx-auto'>
+				<Home />
+				<About />
+				<Experience />
+				<Projects />
+				<Contact />
+			</div>
+		</div>
+	);
 }
 
 export default App;
